@@ -9,7 +9,7 @@ inputs:
     required: true
   php-version:
     description: "Version for PHP runtime"
-    default: "8.2"
+    default: "8.4"
   coverage:
     description: "Type of PHP code coverage to set up"
     default: "none"
