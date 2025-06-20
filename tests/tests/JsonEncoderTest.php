@@ -168,6 +168,7 @@ JSON;
      * @param mixed $value The value to encode
      * @dataProvider getSimpleTestValues
      */
+    #[DataProvider('getSimpleTestValues')]
     public function testSimpleValues($value)
     {
         $encoder = new StreamJsonEncoder($value);
@@ -179,7 +180,7 @@ JSON;
         $this->assertSame(strlen($json), $bytes);
     }
 
-    public function getSimpleTestValues()
+    public static function getSimpleTestValues()
     {
         return [
             [null],
