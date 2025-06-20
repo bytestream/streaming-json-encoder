@@ -2,6 +2,7 @@
 
 namespace Violet\StreamingJsonEncoder;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Violet\StreamingJsonEncoder\Test\DateEncoder;
 use Violet\StreamingJsonEncoder\Test\SerializableData;
@@ -168,6 +169,7 @@ JSON;
      * @param mixed $value The value to encode
      * @dataProvider getSimpleTestValues
      */
+    #[DataProvider('getSimpleTestValues')]
     public function testSimpleValues($value)
     {
         $encoder = new StreamJsonEncoder($value);
@@ -179,7 +181,7 @@ JSON;
         $this->assertSame(strlen($json), $bytes);
     }
 
-    public function getSimpleTestValues()
+    public static function getSimpleTestValues()
     {
         return [
             [null],
