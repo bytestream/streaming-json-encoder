@@ -2,6 +2,7 @@
 
 namespace Violet\StreamingJsonEncoder;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Violet\StreamingJsonEncoder\Test\DateEncoder;
 use Violet\StreamingJsonEncoder\Test\SerializableData;
